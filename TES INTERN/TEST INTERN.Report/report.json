@@ -102,10 +102,10 @@
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"d654b8208e6891d281b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50.41306436119117,\"y\":46.72430355427474,\"z\":0,\"width\":280.34582132564844,\"height\":56.56099903938521,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"REPORT ACTIVITY AM\",\"textStyle\":{\"fontSize\":\"20pt\"}}]}]}}]}}}",
+          "config": "{\"name\":\"d654b8208e6891d281b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50.41306436119117,\"y\":46.72430355427474,\"z\":0,\"width\":373.7944284341979,\"height\":56.56099903938521,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"REPORT ACTIVITY AM EDIT\",\"textStyle\":{\"fontSize\":\"20pt\"}}]}]}}]}}}",
           "filters": "[]",
           "height": 56.56,
-          "width": 280.35,
+          "width": 373.79,
           "x": 50.41,
           "y": 46.72,
           "z": 0.00
