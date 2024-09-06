@@ -1,0 +1,377 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 811.12148392276447,
+            "y": 356.80437086620037
+          },
+          "nodeIndex": "transaksi_channel_group",
+          "nodeLineageTag": "0eca51b3-ce83-42aa-b91c-45e7e7e24b64",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 189.81013220620397,
+            "y": 303.14838727748497
+          },
+          "nodeIndex": "transaksi_sales_funnel",
+          "nodeLineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1169.082413945823,
+            "y": 76.004387964429611
+          },
+          "nodeIndex": "transaksi_gmv",
+          "nodeLineageTag": "0e65fd94-a1bc-445b-95c7-5edc0faa5586",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 98.400222248711628
+          },
+          "nodeIndex": "dim_product",
+          "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 642.33759971768382,
+            "y": 62.1138990229181
+          },
+          "nodeIndex": "dim_witel",
+          "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 321.76374516712366,
+            "y": 31.917927971647828
+          },
+          "nodeIndex": "dim_regional",
+          "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 499.29365169931646,
+            "y": 183.47943355342579
+          },
+          "nodeIndex": "#dim_date",
+          "nodeLineageTag": "3d438a4d-a072-4815-8073-4d2ac8af70c4",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 913.30781855332577,
+            "y": 144.87105789120193
+          },
+          "nodeIndex": "dim_category",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70.955543900968777,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 537.53699643113669,
+            "y": 2
+          },
+          "nodeIndex": "dim_regional",
+          "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 273.96764303571069,
+            "y": 2.5140414861748859
+          },
+          "nodeIndex": "dim_product",
+          "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 813.62209938363446,
+            "y": 0
+          },
+          "nodeIndex": "dim_witel",
+          "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 956.20243978365215,
+            "y": 164.88766811060091
+          },
+          "nodeIndex": "#dim_date",
+          "nodeLineageTag": "3d438a4d-a072-4815-8073-4d2ac8af70c4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 459.38815002694366,
+            "y": 322.33088670503105
+          },
+          "nodeIndex": "transaksi_sales_funnel",
+          "nodeLineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 62.85103715437215,
+            "y": 251.60500341587644
+          },
+          "nodeIndex": "dim_category",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "sales_funnel",
+      "zoomValue": 79.553182037699784,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "dim_product",
+          "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 266.20000076293945,
+            "y": 0
+          },
+          "nodeIndex": "dim_regional",
+          "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 589.20000076293945,
+            "y": 3
+          },
+          "nodeIndex": "dim_witel",
+          "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 145
+        },
+        {
+          "location": {
+            "x": 772.20000076293945,
+            "y": 176
+          },
+          "nodeIndex": "#dim_date",
+          "nodeLineageTag": "3d438a4d-a072-4815-8073-4d2ac8af70c4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 346.20000076293945,
+            "y": 204
+          },
+          "nodeIndex": "transaksi_channel_group",
+          "nodeLineageTag": "0eca51b3-ce83-42aa-b91c-45e7e7e24b64",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 371
+          },
+          "nodeIndex": "dim_category",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "channel_group",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 371.20000076293945,
+            "y": 188
+          },
+          "nodeIndex": "transaksi_gmv",
+          "nodeLineageTag": "0e65fd94-a1bc-445b-95c7-5edc0faa5586",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 64.200000762939453,
+            "y": 0
+          },
+          "nodeIndex": "dim_product",
+          "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 379.20000076293945,
+            "y": 0
+          },
+          "nodeIndex": "dim_regional",
+          "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 677.20000076293945,
+            "y": 117
+          },
+          "nodeIndex": "dim_witel",
+          "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "transaksi_gmv",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "sales_funnel",
+  "defaultDiagram": "All tables"
+}
