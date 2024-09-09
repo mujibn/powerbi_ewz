@@ -35,6 +35,15 @@
           "x": 29.15,
           "y": 105.25,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8b49f4b20bd85b1e7dda\",\"layouts\":[{\"id\":0,\"position\":{\"x\":639.595192915876,\"y\":148.96900695762176,\"z\":1,\"width\":586.1606578115117,\"height\":246.12270714737508,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"#metrics.ACTIVITY/USER\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVITY/USER\"},\"Name\":\"#metrics.ACTIVITY/USER\",\"NativeReferenceName\":\"ACTIVITY/USER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVITY/USER\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 246.12,
+          "width": 586.16,
+          "x": 639.60,
+          "y": 148.97,
+          "z": 1.00
         }
       ],
       "width": 1280.00

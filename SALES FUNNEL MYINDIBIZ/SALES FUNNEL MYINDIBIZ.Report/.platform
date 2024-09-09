@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SALES FUNNEL MYINDIBIZ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "293a1b44-2ef0-4a08-810f-5bf4fc6e0b0d"
+  }
+}
