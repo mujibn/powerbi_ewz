@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":4,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -20,51 +20,30 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "Mujib",
+      "displayName": "Amira",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
-      "name": "577a735a47b5dbbe52cc",
-      "ordinal": 5,
-      "visualContainers": [],
-      "width": 1280.00
-    },
-    {
-      "displayName": "Aliza",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "20ee10a20ba06c8cc102",
-      "ordinal": 4,
-      "visualContainers": [],
-      "width": 1280.00
-    },
-    {
-      "config": "{}",
-      "displayName": "Dian",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "84f392c40b98eb643091",
+      "name": "498db5a601d6bb0c4763",
       "ordinal": 2,
       "visualContainers": [
         {
-          "config": "{\"name\":\"a95dac68e54a06cb25be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.651525068726272,\"y\":0,\"z\":0,\"width\":842.0955622463673,\"height\":378.8223589475062,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"#metrics.TOTAL ACTIVITY\"}],\"Category\":[{\"queryRef\":\"#dim_date.PERIOD\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0},{\"Name\":\"#1\",\"Entity\":\"#dim_date\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"},\"Name\":\"#metrics.TOTAL ACTIVITY\",\"NativeReferenceName\":\"TOTAL ACTIVITY\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#1\"}},\"Property\":\"PERIOD\"},\"Name\":\"#dim_date.PERIOD\",\"NativeReferenceName\":\"PERIOD\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"7dc2067aa79128540de1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.146110056926,\"y\":105.24984187223276,\"z\":0,\"width\":586.1606578115117,\"height\":359.4686907020873,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"#metrics.TOTAL ACTIVITY\"},{\"queryRef\":\"#metrics.TOTAL USER\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"},\"Name\":\"#metrics.TOTAL ACTIVITY\",\"NativeReferenceName\":\"TOTAL ACTIVITY\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL USER\"},\"Name\":\"#metrics.TOTAL USER\",\"NativeReferenceName\":\"TOTAL USER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 378.82,
-          "width": 842.10,
-          "x": 9.65,
-          "y": 0.00,
+          "height": 359.47,
+          "width": 586.16,
+          "x": 29.15,
+          "y": 105.25,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"db0e9c0ce279e0890037\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.651525068726272,\"y\":405.36405288650343,\"z\":1000,\"width\":366.75795261159834,\"height\":252.14609242047388,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"#metrics.ACTIVE USER\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVE USER\"},\"Name\":\"#metrics.ACTIVE USER\",\"NativeReferenceName\":\"ACTIVE USER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVE USER\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"8b49f4b20bd85b1e7dda\",\"layouts\":[{\"id\":0,\"position\":{\"x\":639.595192915876,\"y\":148.96900695762176,\"z\":1,\"width\":586.1606578115117,\"height\":246.12270714737508,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"#metrics.ACTIVITY/USER\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVITY/USER\"},\"Name\":\"#metrics.ACTIVITY/USER\",\"NativeReferenceName\":\"ACTIVITY/USER\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"ACTIVITY/USER\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 252.15,
-          "width": 366.76,
-          "x": 9.65,
-          "y": 405.36,
-          "z": 1000.00
+          "height": 246.12,
+          "width": 586.16,
+          "x": 639.60,
+          "y": 148.97,
+          "z": 1.00
         }
       ],
       "width": 1280.00
@@ -89,27 +68,6 @@
         }
       ],
       "width": 320.00
-    },
-    {
-      "config": "{}",
-      "displayName": "Ibnu-revisi",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "ef27a2ddb4d4e17aeea5",
-      "ordinal": 3,
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"3c079afa580edb186792\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":69.97355674826548,\"z\":0,\"width\":752.8189553606493,\"height\":422.2542217567744,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"#metrics.TOTAL ACTIVITY\"}],\"Category\":[{\"queryRef\":\"#dim_date.PERIOD\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#1\",\"Entity\":\"#dim_date\",\"Type\":0},{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#1\"}},\"Property\":\"PERIOD\"},\"Name\":\"#dim_date.PERIOD\",\"NativeReferenceName\":\"PERIOD\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"},\"Name\":\"#metrics.TOTAL ACTIVITY\",\"NativeReferenceName\":\"TOTAL ACTIVITY\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"TOTAL ACTIVITY\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 422.25,
-          "width": 752.82,
-          "x": 0.00,
-          "y": 69.97,
-          "z": 0.00
-        }
-      ],
-      "width": 1280.00
     },
     {
       "config": "{\"relationships\":[{\"source\":\"f4851df0dc0cb84946d1\",\"target\":\"5361aebd1b6970825ba5\",\"type\":1},{\"source\":\"f4851df0dc0cb84946d1\",\"target\":\"c4e3e704bce1208820d5\",\"type\":3},{\"source\":\"f4851df0dc0cb84946d1\",\"target\":\"0405f08ce950a8e440a2\",\"type\":3},{\"source\":\"f4851df0dc0cb84946d1\",\"target\":\"0210b8a70c424c414d9d\",\"type\":3},{\"source\":\"f4851df0dc0cb84946d1\",\"target\":\"b324ca28b06ed9ad7585\",\"type\":3},{\"source\":\"5361aebd1b6970825ba5\",\"target\":\"f21df8ca09451a99b601\",\"type\":1},{\"source\":\"f21df8ca09451a99b601\",\"target\":\"5361aebd1b6970825ba5\",\"type\":1}]}",
