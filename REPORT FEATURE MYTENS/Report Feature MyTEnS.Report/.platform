@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Report Feature MyTEnS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fbe9768c-2f3a-40ea-976d-c122df9e1833"
+  }
+}
