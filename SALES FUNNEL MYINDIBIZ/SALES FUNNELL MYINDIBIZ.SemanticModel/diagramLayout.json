@@ -110,6 +110,15 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "#metrics",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
@@ -372,6 +381,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "sales_funnel",
+  "selectedDiagram": "transaksi_gmv",
   "defaultDiagram": "All tables"
 }

@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "SemanticModel",
-    "displayName": "SALES FUNNEL MYINDIBIZ"
+    "type": "Report",
+    "displayName": "SALES FUNNELL MYINDIBIZ"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "7fe009dd-2799-41bf-91b0-560683515af5"
+    "logicalId": "f975baff-7966-44bd-a76c-5112a60f6008"
   }
 }
