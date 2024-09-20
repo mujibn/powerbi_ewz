@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 811.12148392276447,
-            "y": 356.80437086620037
+            "y": 372.76333485202429
           },
           "nodeIndex": "transaksi_channel_group",
           "nodeLineageTag": "0eca51b3-ce83-42aa-b91c-45e7e7e24b64",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 189.81013220620397,
-            "y": 303.14838727748497
+            "y": 319.10735126330889
           },
           "nodeIndex": "transaksi_sales_funnel",
           "nodeLineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1169.082413945823,
-            "y": 76.004387964429611
+            "y": 91.963351950253525
           },
           "nodeIndex": "transaksi_gmv",
           "nodeLineageTag": "0e65fd94-a1bc-445b-95c7-5edc0faa5586",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 0,
-            "y": 98.400222248711628
+            "y": 114.35918623453554
           },
           "nodeIndex": "dim_product",
           "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 642.33759971768382,
-            "y": 62.1138990229181
+            "y": 78.072863008742019
           },
           "nodeIndex": "dim_witel",
           "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 321.76374516712366,
-            "y": 31.917927971647828
+            "y": 47.876891957471742
           },
           "nodeIndex": "dim_regional",
           "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 499.29365169931646,
-            "y": 183.47943355342579
+            "y": 199.43839753924971
           },
           "nodeIndex": "#dim_date",
           "nodeLineageTag": "3d438a4d-a072-4815-8073-4d2ac8af70c4",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 913.30781855332577,
-            "y": 144.87105789120193
+            "y": 160.83002187702584
           },
           "nodeIndex": "dim_category",
           "size": {
@@ -112,7 +112,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 1453.082413945823,
+            "y": 228.40218543310016
+          },
           "nodeIndex": "#metrics",
           "size": {
             "height": 200,
@@ -122,7 +125,7 @@
         }
       ],
       "name": "All tables",
-      "zoomValue": 70.955543900968777,
+      "zoomValue": 63.287087723233981,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
@@ -381,6 +384,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "transaksi_gmv",
+  "selectedDiagram": "All tables",
   "defaultDiagram": "All tables"
 }
