@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "SemanticModel",
-    "displayName": "SALES FUNNELL MYINDIBIZ"
+    "type": "Report",
+    "displayName": "OPS MONITORING EXCELLENCE"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "74f1db6c-5dae-4965-a237-6add857ff227"
+    "logicalId": "42c3569e-aea4-45a2-acb7-cf6edd8597dc"
   }
 }
