@@ -33,17 +33,6 @@
   ],
   "sections": [
     {
-      "config": "{}",
-      "displayName": "Aliza",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "9cd2578e1d654859dbf6",
-      "ordinal": 2,
-      "visualContainers": [],
-      "width": 1280.00
-    },
-    {
       "config": "{\"objects\":{\"displayArea\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"184L\"}}}}}]}}",
       "displayName": "Overall Sales Funnel",
       "displayOption": 3,
@@ -515,17 +504,6 @@
         }
       ],
       "width": 2400.00
-    },
-    {
-      "config": "{}",
-      "displayName": "Dian",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "f065399d93084e1e6102",
-      "ordinal": 3,
-      "visualContainers": [],
-      "width": 1280.00
     }
   ],
   "theme": "Solar2666569919254391.json"
