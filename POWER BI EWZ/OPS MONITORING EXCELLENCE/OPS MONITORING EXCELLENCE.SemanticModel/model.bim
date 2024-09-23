@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"dim_user\",\"data_bq\"]"
+        "value": "[\"dim_user\",\"data_bq\",\"city\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -67,6 +67,15 @@
         "fromTable": "data_bq",
         "toColumn": "Date",
         "toTable": "#dim_date"
+      },
+      {
+        "name": "cf437418-57e2-51e5-bba7-0eefc2ec38cf",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "witel",
+        "fromTable": "dim_user",
+        "toCardinality": "many",
+        "toColumn": "witel",
+        "toTable": "city"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -187,7 +196,7 @@
             "formatString": "0",
             "lineageTag": "ca11da45-19ce-4044-8ec7-5645164cba55",
             "sourceColumn": "row_num",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "1e2de885-4d89-4b36-9422-a39506a430b3",
@@ -1444,6 +1453,155 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "#metrics",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "dc77359389b54cbc82e17ee15842f9b6"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "5258af71-4dca-4630-ad79-fdaf17c91b0c",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "12c79573-d093-4b81-a4e8-3c7d9223b3e1",
+        "measures": [
+          {
+            "name": "user",
+            "expression": [
+              "DISTINCTCOUNT(data_bq[user_id])",
+              ""
+            ],
+            "formatString": "0",
+            "lineageTag": "09202822-c478-46a9-84c4-a514e176b98c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "#metrics",
+            "mode": "import",
+            "source": {
+              "expression": "GENERATESERIES(1,1,1)",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "city",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "regional",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "267aac91-f353-478b-b80b-16b4eed97a3e",
+            "sourceColumn": "regional",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "witel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4623adbd-53fa-406f-868c-53c1a1503c77",
+            "sourceColumn": "witel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7058ac3e-1b93-46b3-9355-02d7beccaac3",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "province",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9ee2bb12-71b9-44a7-8cd4-288bdcbe915e",
+            "sourceColumn": "province",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd32cb97-0bda-42c9-9c6b-5b691c38d1d0",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "951f7f68-5594-4a3a-ad89-aac88eb38441",
+        "partitions": [
+          {
+            "name": "city",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\LENOVO\\Downloads\\city - Sheet1.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type text}}),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"regional\", type text}, {\"witel\", type text}, {\"country\", type text}, {\"province\", type text}, {\"city\", type text}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
