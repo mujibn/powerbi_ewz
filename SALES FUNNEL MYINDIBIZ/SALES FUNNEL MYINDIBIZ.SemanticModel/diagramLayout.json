@@ -110,6 +110,15 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "#Metrics",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
@@ -122,8 +131,8 @@
     {
       "ordinal": 1,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 393.94131668383557,
+        "y": 160.49461547357379
       },
       "nodes": [
         {
@@ -137,7 +146,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
@@ -150,7 +159,7 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -163,7 +172,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
@@ -176,7 +185,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
@@ -186,10 +195,11 @@
           "nodeIndex": "transaksi_sales_funnel",
           "nodeLineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
           "size": {
-            "height": 300,
+            "height": 296,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5,
+          "expandedHeight": 300
         },
         {
           "location": {
@@ -201,7 +211,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         }
       ],
       "name": "sales_funnel",

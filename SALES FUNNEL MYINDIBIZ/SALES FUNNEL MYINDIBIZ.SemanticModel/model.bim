@@ -217,6 +217,14 @@
         "fromTable": "transaksi_gmv",
         "toColumn": "id",
         "toTable": "dim_product"
+      },
+      {
+        "name": "285f223a-0f58-4424-9c56-18e3cfdf939a",
+        "fromColumn": "week_date",
+        "fromTable": "transaksi_sales_funnel",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_1ce6fe21-a1ff-4b54-97e3-d7719cc4f707"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -227,11 +235,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          }
-        ],
-        "changedProperties": [
-          {
-            "property": "Name"
           }
         ],
         "columns": [
@@ -514,8 +517,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
             "dataType": "string",
             "lineageTag": "10b1e598-52cc-4a1c-87b7-eaa024225877",
+            "sortByColumn": "funnel_step",
             "sourceColumn": "funnel_category",
             "summarizeBy": "none"
           },
@@ -524,14 +533,19 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "5b2d1ecc-a11b-4fce-95e7-25697a6daea3",
             "sourceColumn": "funnel_step",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "last_sync_date",
@@ -573,6 +587,33 @@
             "lineageTag": "f9f19b16-e856-4833-86f6-be46e460cb26",
             "summarizeBy": "none",
             "type": "calculated"
+          },
+          {
+            "name": "week_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "expression": "transaksi_sales_funnel[created_at] - WEEKDAY('transaksi_sales_funnel'[created_at], 2) + 4",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "lineageTag": "a17c3534-3d44-4fd5-9776-c135d5373b67",
+            "summarizeBy": "none",
+            "type": "calculated",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_1ce6fe21-a1ff-4b54-97e3-d7719cc4f707"
+                },
+                "isDefault": true,
+                "relationship": "285f223a-0f58-4424-9c56-18e3cfdf939a"
+              }
+            ]
           }
         ],
         "lineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
@@ -1429,11 +1470,6 @@
             "value": "Table"
           }
         ],
-        "changedProperties": [
-          {
-            "property": "Name"
-          }
-        ],
         "columns": [
           {
             "name": "id",
@@ -2073,11 +2109,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          }
-        ],
-        "changedProperties": [
-          {
-            "property": "Name"
           }
         ],
         "columns": [
@@ -4158,6 +4189,266 @@
             }
           }
         ]
+      },
+      {
+        "name": "#Metrics",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "681028215e544bfcad81987d11490bec"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "1045d48f-6e04-4d40-bec5-8683d0c09a26",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "ca462e38-df4d-47d5-9467-327784ca18bf",
+        "measures": [
+          {
+            "name": "Valid Leads",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNTNOBLANK(transaksi_sales_funnel[id]),",
+              "    transaksi_sales_funnel[Category] <> \"In App Order\",",
+              "    transaksi_sales_funnel[is_valid] = TRUE",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "d712da27-1914-4e32-9a37-5dd52175a5b0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "#Metrics",
+            "mode": "import",
+            "source": {
+              "expression": "GENERATESERIES(1,1,1)",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_1ce6fe21-a1ff-4b54-97e3-d7719cc4f707",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "456b907e-8667-4235-b3f4-494d5c215b6b",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "972cc0c3-7fbe-4ba7-aaff-aace0a0e9d86",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "06f425e7-ca20-4233-a087-8385f9b7c2f7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "8d5db550-024e-4cab-9ab5-e5004a295c07",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "53164e58-c541-418b-99d3-a7b2318fb17a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "ccefea6b-ae3d-4d55-b74c-2dd5d2cbed04",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "2dc3d5bb-4881-49d1-89cc-337d7d322d1f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "bc4fd58d-dbe6-495e-aea6-31f71c49331f",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "f71bfdc2-ef6d-4029-9cc0-64df5886bf59",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "025a5e87-166e-4f3f-9a25-41f52b55ab69",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "f2feff39-bf0c-4fef-afe6-61d21d28c28c",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "6ce3b5f0-ef37-43dd-b560-4dad4ae59fec"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "4cd22001-cfbd-4b61-a8d0-019bf4f64335",
+        "partitions": [
+          {
+            "name": "LocalDateTable_1ce6fe21-a1ff-4b54-97e3-d7719cc4f707",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('transaksi_sales_funnel'[week_date])), 1, 1), Date(Year(MAX('transaksi_sales_funnel'[week_date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }
