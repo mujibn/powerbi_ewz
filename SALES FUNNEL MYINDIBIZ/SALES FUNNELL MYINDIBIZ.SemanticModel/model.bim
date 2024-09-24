@@ -225,6 +225,14 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_03900421-aee5-4ffc-b17c-741c8a6fdd21"
+      },
+      {
+        "name": "be955028-33ce-4a57-9320-c397b50622a8",
+        "fromColumn": "Week_Date",
+        "fromTable": "transaksi_gmv",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_37860fde-d964-4273-a456-7fe26e69c7b4"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -603,6 +611,32 @@
                 "relationship": "55e61526-05df-490f-a73a-0af9908c7f2f"
               }
             ]
+          },
+          {
+            "name": "regional_to",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13c0f47b-7566-441f-ad82-ca7bc12c6be8",
+            "sourceColumn": "regional_to",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "witel_to",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d963250c-12ff-4206-a850-ecc1982a748f",
+            "sourceColumn": "witel_to",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
@@ -2484,6 +2518,85 @@
                 "relationship": "8a01f26a-5165-42b1-98b1-9ad42a9bce0f"
               }
             ]
+          },
+          {
+            "name": "Week_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "expression": [
+              "",
+              "VAR AdjustedDate = 'transaksi_gmv'[reference_date] + 4",
+              "RETURN ",
+              "    AdjustedDate - WEEKDAY(AdjustedDate, 2) + 1 - 4"
+            ],
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "lineageTag": "8b3c0687-113d-4784-8cc6-45e22edd6463",
+            "summarizeBy": "none",
+            "type": "calculated",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_37860fde-d964-4273-a456-7fe26e69c7b4"
+                },
+                "isDefault": true,
+                "relationship": "be955028-33ce-4a57-9320-c397b50622a8"
+              }
+            ]
+          },
+          {
+            "name": "Billing_Code_Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH(",
+              "    TRUE(), ",
+              "    'transaksi_gmv'[billing_code] = \"RECURRING\", \"HSI B2B Recurring\", ",
+              "    'transaksi_gmv'[billing_code] = \"NEW_INSTALLATION\", \"HSI B2B New Installation\", ",
+              "    \"Other Product Purchase\"",
+              ")",
+              ""
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "ec61e170-113c-4a83-8c0b-d2a0b8c0a30a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Top_10_Witel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "IF(",
+              "    [Rank_Witel] <= 10, ",
+              "    transaksi_gmv[witel], ",
+              "    \"Others\"",
+              ")",
+              ""
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "ff664184-26a1-4523-961a-2556bb72cbf6",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "0e65fd94-a1bc-445b-95c7-5edc0faa5586",
@@ -4362,6 +4475,51 @@
             ],
             "formatString": "0",
             "lineageTag": "fe6c50ff-e755-4ce0-aa6a-d68b78d33ec5"
+          },
+          {
+            "name": "Total GMV",
+            "expression": "FORMAT(sum(transaksi_gmv[total_payment])/1000000000, \"#,0.0\") & \" B\"",
+            "lineageTag": "5f976a54-4fec-49f9-9979-4559f8b6162d"
+          },
+          {
+            "name": "Weekly_GMV",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "sum(transaksi_gmv[total_payment])",
+              ""
+            ],
+            "lineageTag": "b0fd629d-8edf-4499-9e86-be86f1449125"
+          },
+          {
+            "name": "GMV",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "sum(transaksi_gmv[total_payment])",
+            "lineageTag": "efcc326e-c429-4596-bcce-3cc3fc665a4d"
+          },
+          {
+            "name": "Rank_Witel",
+            "expression": [
+              "",
+              "RANKX(",
+              "    ALL(transaksi_gmv[witel]), ",
+              "    [GMV], ",
+              "    , DESC",
+              ")",
+              "",
+              ""
+            ],
+            "formatString": "0",
+            "lineageTag": "db86e15d-0f10-492c-a9f2-7d6feeff5d44"
           }
         ],
         "partitions": [
@@ -4575,6 +4733,212 @@
             "mode": "import",
             "source": {
               "expression": "Calendar(Date(Year(MIN('transaksi_sales_funnel'[week_date])), 1, 1), Date(Year(MAX('transaksi_sales_funnel'[week_date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_37860fde-d964-4273-a456-7fe26e69c7b4",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "1a7ca2b2-60d8-46a9-ab31-6f2ec042b789",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d17d0dfa-05e5-4fef-b850-de21e52f5447",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "a360b45d-e83a-40bc-9e54-4d19ecaf26a1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "2afae41a-8bd7-480f-b29e-e4a6aebdf70a",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "c8549971-c374-4c98-b169-36f2609a68f3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "cd86c10e-85d7-4730-bb67-8f3e325d8262",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f99b06b9-3135-4715-a54b-7eb44a67659b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "467fdeae-49ec-40c8-94ee-fd21585f5f08",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "3634bc62-1fc8-4a4c-b4d7-a0b49650b07b",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "d0f7b6eb-9d06-44a8-9129-cb43d339a611",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "a910a2ca-f495-4486-bc2d-12bff64b13a6",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "ecf2cf0e-f890-4b5f-8395-1849df665172"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "b807eac9-53a5-40c8-9b10-390c158a5aab",
+        "partitions": [
+          {
+            "name": "LocalDateTable_37860fde-d964-4273-a456-7fe26e69c7b4",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('transaksi_gmv'[Week_Date])), 1, 1), Date(Year(MAX('transaksi_gmv'[Week_Date])), 12, 31))",
               "type": "calculated"
             }
           }
