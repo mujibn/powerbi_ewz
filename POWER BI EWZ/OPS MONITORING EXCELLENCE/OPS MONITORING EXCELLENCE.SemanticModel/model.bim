@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"dim_user\",\"data_bq\",\"city\"]"
+        "value": "[\"dim_user\",\"data_bq\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -67,15 +67,6 @@
         "fromTable": "data_bq",
         "toColumn": "Date",
         "toTable": "#dim_date"
-      },
-      {
-        "name": "cf437418-57e2-51e5-bba7-0eefc2ec38cf",
-        "crossFilteringBehavior": "bothDirections",
-        "fromColumn": "witel",
-        "fromTable": "dim_user",
-        "toCardinality": "many",
-        "toColumn": "witel",
-        "toTable": "city"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -179,6 +170,7 @@
                 "value": "Automatic"
               }
             ],
+            "dataCategory": "Uncategorized",
             "dataType": "string",
             "lineageTag": "77f55ad4-9b0b-4fb7-bed9-b370ab7facc1",
             "sourceColumn": "witel",
@@ -196,7 +188,108 @@
             "formatString": "0",
             "lineageTag": "ca11da45-19ce-4044-8ec7-5645164cba55",
             "sourceColumn": "row_num",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "City",
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    dim_user[witel] = \"JATIM BARAT\", \"Malang\",",
+              "    dim_user[witel] = \"PAPUA BARAT\", \"Manokwari\",",
+              "    dim_user[witel] = \"BANTEN\", \"Serang\",",
+              "    dim_user[witel] = \"JAKARTA INNER\", \"Jakarta Barat\",",
+              "    dim_user[witel] = \"BEKASI KARAWANG\", \"Bekasi\",",
+              "    dim_user[witel] = \"SEMARANG JATENG UTARA\", \"Semarang\",",
+              "    dim_user[witel] = \"PRIANGAN TIMUR\", \"Cirebon\",",
+              "    dim_user[witel] = \"NUSA TENGGARA\", \"Mataram\",",
+              "    dim_user[witel] = \"KALSELTENG\", \"Banjarmasin\",",
+              "    dim_user[witel] = \"Riau\", \"Pekanbaru\",",
+              "    dim_user[witel] = \"SOLO JATENG TIMUR\", \"Solo\",",
+              "    dim_user[witel] = \"SUMBAR JAMBI\", \"Padang\",",
+              "    dim_user[witel] = \"SURAMADU\", \"Surabaya\",",
+              "    dim_user[witel] = \"ACEH\", \"Banda Aceh\",",
+              "    dim_user[witel] = \"JAKARTA CENTRUM\", \"Jakarta Pusat\",",
+              "    dim_user[witel] = \"JATIM TIMUR\", \"Jember\",",
+              "    dim_user[witel] = \"SUMUT\", \"Medan\",",
+              "    dim_user[witel] = \"PRIANGAN BARAT\", \"Bogor\",",
+              "    dim_user[witel] = \"SULBAGTENG\", \"Palu\",",
+              "    dim_user[witel] = \"SUMALUT\", \"Manado\",",
+              "    dim_user[witel] = \"KALTIMTARA\", \"Samarinda\",",
+              "    dim_user[witel] = \"SUMBAGSEL\", \"Palembang\",",
+              "    dim_user[witel] = \"YOGYA JATENG SELATAN\", \"Yogyakarta\",",
+              "    dim_user[witel] = \"BALI\", \"Denpasar\",",
+              "    dim_user[witel] = \"PAPUA\", \"Jayapura\",",
+              "    dim_user[witel] = \"SULBAGSEL\", \"Makassar\",",
+              "    dim_user[witel] = \"KALBAR\", \"Pontianak\",",
+              "    dim_user[witel] = \"LAMPUNG BENGKULU\", \"Bandar Lampung\",",
+              "    dim_user[witel] = \"JAKARTA OUTER\", \"Jakarta Selatan\",",
+              "    dim_user[witel] = \"BALIKPAPAN\", \"Balikpapan\",",
+              "    dim_user[witel] = \"BANDUNG\", \"Bandung\",",
+              "    \"Unknown\" ",
+              ")",
+              ""
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "db63856a-b3ce-4b32-a779-76976a95ceed",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "province",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "StateOrProvince",
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    dim_user[witel] = \"JATIM BARAT\", \"Jawa Timur\",",
+              "    dim_user[witel] = \"JAKARTA INNER\", \"DKI Jakarta\",",
+              "    dim_user[witel] = \"BEKASI KARAWANG\", \"Jawa Barat\",",
+              "    dim_user[witel] = \"SEMARANG JATENG UTARA\", \"Jawa Tengah\",",
+              "    dim_user[witel] = \"PRIANGAN TIMUR\", \"Jawa Barat\",",
+              "    dim_user[witel] = \"NUSA TENGGARA\", \"Nusa Tenggara Barat\",",
+              "    dim_user[witel] = \"KALSELTENG\", \"Kalimantan Selatan\",",
+              "    dim_user[witel] = \"SOLO JATENG TIMUR\", \"Jawa Tengah\",",
+              "    dim_user[witel] = \"SUMBAR JAMBI\", \"Sumatera Barat\",",
+              "    dim_user[witel] = \"SURAMADU\", \"Jawa Timur\",",
+              "    dim_user[witel] = \"JAKARTA CENTRUM\", \"DKI Jakarta\",",
+              "    dim_user[witel] = \"JATIM TIMUR\", \"Jawa Timur\",",
+              "    dim_user[witel] = \"BALIKPAPAN\", \"Kalimantan Timur\",",
+              "    dim_user[witel] = \"SUMUT\", \"Sumatera Utara\",",
+              "    dim_user[witel] = \"PRIANGAN BARAT\", \"Jawa Barat\",",
+              "    dim_user[witel] = \"SULBAGTENG\", \"Sulawesi Tengah\",",
+              "    dim_user[witel] = \"SUMALUT\", \"Sulawesi Utara\",",
+              "    dim_user[witel] = \"KALTIMTARA\", \"Kalimantan Timur\",",
+              "    dim_user[witel] = \"SUMBAGSEL\", \"Kalimantan Utara\",",
+              "    dim_user[witel] = \"YOGYA JATENG SELATAN\", \"DI Yogyakarta \",",
+              "    dim_user[witel] = \"BANDUNG\", \"Jawa Barat\",",
+              "    dim_user[witel] = \"SULBAGSEL\", \"Sulawesi Selatan\",",
+              "    dim_user[witel] = \"KALBAR\", \"Kalimantan Barat \",",
+              "    dim_user[witel] = \"LAMPUNG BENGKULU\", \"Lampung\",",
+              "    dim_user[witel] = \"JAKARTA OUTER\", \"DKI Jakarta\",",
+              "    dim_user[witel]",
+              ")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "a2833071-8519-470a-8d06-22e93b1bcaf8",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "1e2de885-4d89-4b36-9422-a39506a430b3",
@@ -771,6 +864,7 @@
                 "value": "Automatic"
               }
             ],
+            "dataCategory": "City",
             "dataType": "string",
             "lineageTag": "7b3ff45a-63c4-4e8c-a7ec-cfaef95dde1f",
             "sourceColumn": "city",
@@ -1500,105 +1594,6 @@
             "source": {
               "expression": "GENERATESERIES(1,1,1)",
               "type": "calculated"
-            }
-          }
-        ]
-      },
-      {
-        "name": "city",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "regional",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "267aac91-f353-478b-b80b-16b4eed97a3e",
-            "sourceColumn": "regional",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "witel",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "4623adbd-53fa-406f-868c-53c1a1503c77",
-            "sourceColumn": "witel",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "country",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "7058ac3e-1b93-46b3-9355-02d7beccaac3",
-            "sourceColumn": "country",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "province",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "9ee2bb12-71b9-44a7-8cd4-288bdcbe915e",
-            "sourceColumn": "province",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "city",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "dd32cb97-0bda-42c9-9c6b-5b691c38d1d0",
-            "sourceColumn": "city",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "951f7f68-5594-4a3a-ad89-aac88eb38441",
-        "partitions": [
-          {
-            "name": "city",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\LENOVO\\Downloads\\city - Sheet1.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type text}}),",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
-                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"regional\", type text}, {\"witel\", type text}, {\"country\", type text}, {\"province\", type text}, {\"city\", type text}})",
-                "in",
-                "    #\"Changed Type1\""
-              ],
-              "type": "m"
             }
           }
         ]
