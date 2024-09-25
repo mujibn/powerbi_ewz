@@ -621,7 +621,11 @@
               }
             ],
             "dataType": "string",
+<<<<<<< HEAD
+            "lineageTag": "cae1f907-cbfc-44ac-a9e9-ec955117cdd0",
+=======
             "lineageTag": "13c0f47b-7566-441f-ad82-ca7bc12c6be8",
+>>>>>>> 21f28e2d107e2e8efeeb5a97f0f1bcb74e77e682
             "sourceColumn": "regional_to",
             "summarizeBy": "none"
           },
@@ -634,7 +638,11 @@
               }
             ],
             "dataType": "string",
+<<<<<<< HEAD
+            "lineageTag": "8d319bb5-44ea-4652-87ec-4f535fc96f50",
+=======
             "lineageTag": "d963250c-12ff-4206-a850-ecc1982a748f",
+>>>>>>> 21f28e2d107e2e8efeeb5a97f0f1bcb74e77e682
             "sourceColumn": "witel_to",
             "summarizeBy": "none"
           }
@@ -4477,12 +4485,16 @@
             "lineageTag": "fe6c50ff-e755-4ce0-aa6a-d68b78d33ec5"
           },
           {
+<<<<<<< HEAD
+            "name": "Valid Leads",
+=======
             "name": "Total GMV",
             "expression": "FORMAT(sum(transaksi_gmv[total_payment])/1000000000, \"#,0.0\") & \" B\"",
             "lineageTag": "5f976a54-4fec-49f9-9979-4559f8b6162d"
           },
           {
             "name": "Weekly_GMV",
+>>>>>>> 21f28e2d107e2e8efeeb5a97f0f1bcb74e77e682
             "annotations": [
               {
                 "name": "PBI_FormatHint",
@@ -4490,6 +4502,17 @@
               }
             ],
             "expression": [
+<<<<<<< HEAD
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(transaksi_sales_funnel[id]),",
+              "    transaksi_sales_funnel[category] <> \"In App Order\",",
+              "    transaksi_sales_funnel[is_valid] = TRUE()",
+              ")",
+              ""
+            ],
+            "lineageTag": "38d45871-27a7-4fac-8cae-ec5abefc8843"
+=======
               "sum(transaksi_gmv[total_payment])",
               ""
             ],
@@ -4520,6 +4543,7 @@
             ],
             "formatString": "0",
             "lineageTag": "db86e15d-0f10-492c-a9f2-7d6feeff5d44"
+>>>>>>> 21f28e2d107e2e8efeeb5a97f0f1bcb74e77e682
           }
         ],
         "partitions": [
