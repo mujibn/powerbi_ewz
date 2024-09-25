@@ -27,6 +27,24 @@
       "name": "0b3f0d5561be5a1a9498",
       "visualContainers": [
         {
+          "config": "{\"name\":\"3cd471fa65efe6271db4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":981.7410655845006,\"y\":138.74067286294016,\"z\":5004,\"width\":266.924990181961,\"height\":82.94279355936641,\"tabOrder\":5004}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_user.witel\",\"active\":true},{\"queryRef\":\"dim_user.City\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"witel\"},\"Name\":\"dim_user.witel\",\"NativeReferenceName\":\"witel\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"dim_user.City\",\"NativeReferenceName\":\"City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'City'\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 82.94,
+          "width": 266.92,
+          "x": 981.74,
+          "y": 138.74,
+          "z": 5004.00
+        },
+        {
+          "config": "{\"name\":\"3d5e700ec6e6470f5ccd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.68516821573504,\"y\":137.2326220709517,\"z\":5001,\"width\":266.924990181961,\"height\":84.45084435135489,\"tabOrder\":5001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_user.regional\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"regional\"},\"Name\":\"dim_user.regional\",\"NativeReferenceName\":\"regional\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Regional'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 84.45,
+          "width": 266.92,
+          "x": 34.69,
+          "y": 137.23,
+          "z": 5001.00
+        },
+        {
           "config": "{\"name\":\"52f156526f3cff5eb1f2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.68516821573504,\"y\":28.652965047781123,\"z\":1000,\"width\":358.91608849325826,\"height\":70.87838722345856,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"User Mapping\",\"textStyle\":{\"fontSize\":\"28pt\"}}]}]}}]}}}",
           "filters": "[]",
           "height": 70.88,
@@ -36,49 +54,31 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"75c439e3a87cdacd7600\",\"layouts\":[{\"id\":0,\"position\":{\"x\":971.1847100405812,\"y\":137.2326220709517,\"z\":4000,\"width\":277.4813457258803,\"height\":76.91059039141248,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"city.city\",\"active\":true},{\"queryRef\":\"dim_user.province\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"city\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"city\"},\"Name\":\"city.city\",\"NativeReferenceName\":\"city\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"province\"},\"Name\":\"dim_user.province\",\"NativeReferenceName\":\"province\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"outlineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"items\":[{\"properties\":{\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'City'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "config": "{\"name\":\"577c00b51d2553d89ea5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":346.8516821573504,\"y\":138.74067286294016,\"z\":5002,\"width\":266.924990181961,\"height\":82.94279355936641,\"tabOrder\":5002}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_user.witel\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"witel\"},\"Name\":\"dim_user.witel\",\"NativeReferenceName\":\"witel\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Witel'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 76.91,
-          "width": 277.48,
-          "x": 971.18,
-          "y": 137.23,
-          "z": 4000.00
+          "height": 82.94,
+          "width": 266.92,
+          "x": 346.85,
+          "y": 138.74,
+          "z": 5002.00
         },
         {
-          "config": "{\"name\":\"dec284488d9a5c97d629\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.68516821573504,\"y\":137.2326220709517,\"z\":0,\"width\":277.4813457258803,\"height\":76.91059039141248,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"city.regional\",\"active\":true},{\"queryRef\":\"dim_user.regional\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"city\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"regional\"},\"Name\":\"city.regional\",\"NativeReferenceName\":\"regional\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"regional\"},\"Name\":\"dim_user.regional\",\"NativeReferenceName\":\"regional1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"outlineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"items\":[{\"properties\":{\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Regional'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "config": "{\"name\":\"8db414389f2b1569134b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":665.0503992669197,\"y\":138.74067286294016,\"z\":5003,\"width\":266.924990181961,\"height\":82.94279355936641,\"tabOrder\":5003}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_user.province\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"province\"},\"Name\":\"dim_user.province\",\"NativeReferenceName\":\"province\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Province'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 76.91,
-          "width": 277.48,
-          "x": 34.69,
-          "y": 137.23,
-          "z": 0.00
+          "height": 82.94,
+          "width": 266.92,
+          "x": 665.05,
+          "y": 138.74,
+          "z": 5003.00
         },
         {
-          "config": "{\"name\":\"df8004ac88349eb0a3c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.68516821573504,\"y\":282.0054981018458,\"z\":4001,\"width\":1213.9808875507265,\"height\":554.9626914517606,\"tabOrder\":4001}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_user.City\",\"active\":true}],\"Size\":[{\"queryRef\":\"#metrics.user\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"user\"},\"Name\":\"#metrics.user\",\"NativeReferenceName\":\"user\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"dim_user.City\",\"NativeReferenceName\":\"City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'en-US'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"df8004ac88349eb0a3c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.68516821573504,\"y\":282.0054981018458,\"z\":5000,\"width\":1213.9808875507265,\"height\":554.9626914517606,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_user.City\",\"active\":true}],\"Size\":[{\"queryRef\":\"#metrics.user\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"user\"},\"Name\":\"#metrics.user\",\"NativeReferenceName\":\"user\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"dim_user.City\",\"NativeReferenceName\":\"City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'en-US'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
           "height": 554.96,
           "width": 1213.98,
           "x": 34.69,
           "y": 282.01,
-          "z": 4001.00
-        },
-        {
-          "config": "{\"name\":\"e80a1f8d4075147583db\",\"layouts\":[{\"id\":0,\"position\":{\"x\":663.5423484749313,\"y\":138.74067286294016,\"z\":3000,\"width\":277.4813457258803,\"height\":76.91059039141248,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"city.province\",\"active\":true},{\"queryRef\":\"dim_user.city\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"city\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"province\"},\"Name\":\"city.province\",\"NativeReferenceName\":\"province\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"dim_user.city\",\"NativeReferenceName\":\"City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"outlineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"items\":[{\"properties\":{\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Province'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 76.91,
-          "width": 277.48,
-          "x": 663.54,
-          "y": 138.74,
-          "z": 3000.00
-        },
-        {
-          "config": "{\"name\":\"f146a81595583584f2a7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":351.37583453331587,\"y\":137.2326220709517,\"z\":2000,\"width\":277.4813457258803,\"height\":76.91059039141248,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"city.witel\",\"active\":true},{\"queryRef\":\"dim_user.witel\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"city\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"witel\"},\"Name\":\"city.witel\",\"NativeReferenceName\":\"witel\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"witel\"},\"Name\":\"dim_user.witel\",\"NativeReferenceName\":\"witel1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"outlineWeight\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"items\":[{\"properties\":{\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Witel'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading3'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 76.91,
-          "width": 277.48,
-          "x": 351.38,
-          "y": 137.23,
-          "z": 2000.00
+          "z": 5000.00
         }
       ],
       "width": 1300.00
