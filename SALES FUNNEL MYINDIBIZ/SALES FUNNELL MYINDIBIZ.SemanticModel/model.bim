@@ -603,6 +603,32 @@
                 "relationship": "55e61526-05df-490f-a73a-0af9908c7f2f"
               }
             ]
+          },
+          {
+            "name": "regional_to",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cae1f907-cbfc-44ac-a9e9-ec955117cdd0",
+            "sourceColumn": "regional_to",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "witel_to",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d319bb5-44ea-4652-87ec-4f535fc96f50",
+            "sourceColumn": "witel_to",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
@@ -4362,6 +4388,25 @@
             ],
             "formatString": "0",
             "lineageTag": "fe6c50ff-e755-4ce0-aa6a-d68b78d33ec5"
+          },
+          {
+            "name": "Valid Leads",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(transaksi_sales_funnel[id]),",
+              "    transaksi_sales_funnel[category] <> \"In App Order\",",
+              "    transaksi_sales_funnel[is_valid] = TRUE()",
+              ")",
+              ""
+            ],
+            "lineageTag": "38d45871-27a7-4fac-8cae-ec5abefc8843"
           }
         ],
         "partitions": [
