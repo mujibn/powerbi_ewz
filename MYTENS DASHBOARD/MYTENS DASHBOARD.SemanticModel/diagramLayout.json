@@ -7,7 +7,48 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 168
+          },
+          "nodeIndex": "dim_user",
+          "nodeLineageTag": "1400ea5f-a1c1-4d9f-9382-326b40f93c24",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 360,
+            "y": 0
+          },
+          "nodeIndex": "data_sales",
+          "nodeLineageTag": "8c10a9aa-d16d-455c-bffa-fa0ac947a6f8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 248
+        },
+        {
+          "location": {
+            "x": 723,
+            "y": 160
+          },
+          "nodeIndex": "#dim_date",
+          "nodeLineageTag": "334868dc-9aee-428c-8674-ef7e3e5e812e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "All tables",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
