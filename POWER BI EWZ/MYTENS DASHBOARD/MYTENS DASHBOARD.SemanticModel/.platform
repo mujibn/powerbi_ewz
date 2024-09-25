@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MYTENS DASHBOARD"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "67c6382e-beb4-4740-83b0-ebebda193dff"
+  }
+}
