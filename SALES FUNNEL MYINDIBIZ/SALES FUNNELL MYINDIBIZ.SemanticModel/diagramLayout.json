@@ -4,14 +4,23 @@
     {
       "ordinal": 0,
       "scrollPosition": {
+<<<<<<< HEAD
+        "x": 84.3083245049751,
+        "y": 153.51664946776796
+=======
         "x": 0,
         "y": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
       },
       "nodes": [
         {
           "location": {
             "x": 811.12148392276447,
+<<<<<<< HEAD
+            "y": 372.76333485202429
+=======
             "y": 356.80437086620037
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "transaksi_channel_group",
           "nodeLineageTag": "0eca51b3-ce83-42aa-b91c-45e7e7e24b64",
@@ -19,12 +28,20 @@
             "height": 300,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 7
+=======
           "zIndex": 2
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 189.81013220620397,
+<<<<<<< HEAD
+            "y": 319.10735126330889
+=======
             "y": 303.14838727748497
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "transaksi_sales_funnel",
           "nodeLineageTag": "ed928225-306d-4059-a13e-6b02f1a0a466",
@@ -32,12 +49,20 @@
             "height": 300,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 9
+=======
           "zIndex": 5
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 1169.082413945823,
+<<<<<<< HEAD
+            "y": 91.963351950253525
+=======
             "y": 76.004387964429611
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "transaksi_gmv",
           "nodeLineageTag": "0e65fd94-a1bc-445b-95c7-5edc0faa5586",
@@ -45,12 +70,20 @@
             "height": 300,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 6
+=======
           "zIndex": 1
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 0,
+<<<<<<< HEAD
+            "y": 114.35918623453554
+=======
             "y": 98.400222248711628
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "dim_product",
           "nodeLineageTag": "e205c0e6-2d67-4a30-8e2d-6a0426a85979",
@@ -58,12 +91,20 @@
             "height": 176,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 1
+=======
           "zIndex": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 642.33759971768382,
+<<<<<<< HEAD
+            "y": 78.072863008742019
+=======
             "y": 62.1138990229181
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "dim_witel",
           "nodeLineageTag": "f336d1c9-3896-470a-a44f-d854336fbb0c",
@@ -71,12 +112,20 @@
             "height": 104,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 2
+=======
           "zIndex": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 321.76374516712366,
+<<<<<<< HEAD
+            "y": 47.876891957471742
+=======
             "y": 31.917927971647828
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "dim_regional",
           "nodeLineageTag": "c8617d88-bc03-4689-ab5b-0533f8a142ce",
@@ -84,12 +133,20 @@
             "height": 104,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 8
+=======
           "zIndex": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 499.29365169931646,
+<<<<<<< HEAD
+            "y": 199.43839753924971
+=======
             "y": 183.47943355342579
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "#dim_date",
           "nodeLineageTag": "3d438a4d-a072-4815-8073-4d2ac8af70c4",
@@ -97,28 +154,50 @@
             "height": 200,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 3
+=======
           "zIndex": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
             "x": 913.30781855332577,
+<<<<<<< HEAD
+            "y": 160.83002187702584
+=======
             "y": 144.87105789120193
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           },
           "nodeIndex": "dim_category",
           "size": {
             "height": 104,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1453.082413945823,
+            "y": 228.40218543310016
+          },
+=======
           "zIndex": 0
         },
         {
           "location": {},
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
           "nodeIndex": "#metrics",
           "size": {
             "height": 200,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 5
+=======
           "zIndex": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         }
       ],
       "name": "All tables",
@@ -132,7 +211,11 @@
       "ordinal": 1,
       "scrollPosition": {
         "x": 0,
+<<<<<<< HEAD
+        "y": 81.811967177430574
+=======
         "y": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
       },
       "nodes": [
         {
@@ -316,8 +399,13 @@
     {
       "ordinal": 3,
       "scrollPosition": {
+<<<<<<< HEAD
+        "x": 211.60714721679688,
+        "y": 222.32142639160156
+=======
         "x": 56.799999237060547,
         "y": 0
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
       },
       "nodes": [
         {
@@ -331,7 +419,11 @@
             "height": 300,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 1
+=======
           "zIndex": 4
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
@@ -344,7 +436,11 @@
             "height": 176,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 2
+=======
           "zIndex": 1
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
@@ -357,7 +453,11 @@
             "height": 104,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 4
+=======
           "zIndex": 3
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         },
         {
           "location": {
@@ -370,7 +470,11 @@
             "height": 104,
             "width": 234
           },
+<<<<<<< HEAD
+          "zIndex": 3
+=======
           "zIndex": 2
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
         }
       ],
       "name": "transaksi_gmv",
@@ -381,6 +485,10 @@
       "tablesLocked": false
     }
   ],
+<<<<<<< HEAD
+  "selectedDiagram": "sales_funnel",
+=======
   "selectedDiagram": "transaksi_gmv",
+>>>>>>> ed9add565db99220fb68621065dc6b86c70ba0ae
   "defaultDiagram": "All tables"
 }
