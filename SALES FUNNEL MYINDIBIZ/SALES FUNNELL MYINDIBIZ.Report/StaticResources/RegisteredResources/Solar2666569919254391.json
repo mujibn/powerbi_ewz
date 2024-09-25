@@ -1,0 +1,17 @@
+{
+  "name": "Solar",
+  "dataColors": [
+    "#F91B1B",
+    "#AF5DAF",
+    "#E13102",
+    "#D3004C",
+    "#DA9797",
+    "#FFFF03",
+    "#E9CACA",
+    "#000000"
+  ],
+  "tableAccent": "#FFAC00",
+  "maximum": "#FFAC00",
+  "center": "#5C0001",
+  "minimum": "#000000"
+}
