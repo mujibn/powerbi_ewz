@@ -4520,6 +4520,19 @@
             ],
             "formatString": "0",
             "lineageTag": "db86e15d-0f10-492c-a9f2-7d6feeff5d44"
+          },
+          {
+            "name": "Valid Leads",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    DISTINCTCOUNT(transaksi_sales_funnel[id]),",
+              "    transaksi_sales_funnel[category] <> \"In App Order\",",
+              "    transaksi_sales_funnel[is_valid] = TRUE()",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "e01435ce-94a2-4792-8332-05deb2140392"
           }
         ],
         "partitions": [
