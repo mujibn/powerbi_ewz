@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "MOCKUP OPS MONITORING EXCELLENCE"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ed720275-9b76-4baf-86e5-8454af923289"
+  }
+}
