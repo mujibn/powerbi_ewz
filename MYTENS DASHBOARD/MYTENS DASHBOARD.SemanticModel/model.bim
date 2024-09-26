@@ -175,7 +175,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Value.NativeQuery(PostgreSQL.Database(\"localhost:9999\", \"mytens\"), \"select * from (#(lf)select nipnas, nik, nama, witel, #(lf)ROW_NUMBER() OVER (PARTITION BY nipnas ORDER BY nipnas) AS row_num#(lf)from mytens_datamart.s3_am_profile#(lf)) as data1#(lf)where row_num=1\", null, [EnableFolding=true])",
+                "    Source = Value.NativeQuery(PostgreSQL.Database(\"localhost:9999\", \"mytens\"), \"select * from (#(lf)select nipnas, nik, nama, witel, #(lf)ROW_NUMBER() OVER (PARTITION BY nipnas ORDER BY nipnas) AS row_num#(lf)from mytens_datamart.s3_am_profile#(lf)where divisi = 'RBS'#(lf)) as data1#(lf)where row_num=1\", null, [EnableFolding=true])",
                 "in",
                 "    Source"
               ],
@@ -1605,6 +1605,53 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "#metrics",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "2b95bdfedecb401d925689a51baf1c8e"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "18f94029-7f89-49df-982e-fe2cde23093e",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "67593fcb-8fef-46a2-b4a0-f19390e6d7da",
+        "measures": [
+          {
+            "name": "Total_LOP",
+            "expression": "DISTINCTCOUNTNOBLANK(data_sales[project_id])",
+            "formatString": "0",
+            "lineageTag": "3fa67afb-15ae-42b8-9769-4fea12de601c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "#metrics",
+            "mode": "import",
+            "source": {
+              "expression": "GENERATESERIES(1,1,1)",
+              "type": "calculated"
+            }
+          }
+        ]
       }
     ]
   }

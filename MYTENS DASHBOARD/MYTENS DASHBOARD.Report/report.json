@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -20,12 +20,31 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "Page 1",
+      "displayName": "LOP",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "6693a2ebf33ceec10e4f",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"203a3ce60b9bc904f671\",\"layouts\":[{\"id\":0,\"position\":{\"x\":28.81656309150907,\"y\":178.38824770934187,\"z\":1000,\"width\":1211.667867133453,\"height\":441.8539674031391,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_user.nik\"},{\"queryRef\":\"dim_user.nama\"},{\"queryRef\":\"dim_user.witel\"},{\"queryRef\":\"#metrics.Total_LOP\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_user\",\"Type\":0},{\"Name\":\"#\",\"Entity\":\"#metrics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nik\"},\"Name\":\"dim_user.nik\",\"NativeReferenceName\":\"nik\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nama\"},\"Name\":\"dim_user.nama\",\"NativeReferenceName\":\"nama\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"witel\"},\"Name\":\"dim_user.witel\",\"NativeReferenceName\":\"witel\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"#\"}},\"Property\":\"Total_LOP\"},\"Name\":\"#metrics.Total_LOP\",\"NativeReferenceName\":\"Total_LOP\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"nik\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000000'\"}}}}}}}],\"columnHeaders\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000000'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"total\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000000'\"}}}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"105.04986512069625D\"}}}},\"selector\":{\"metadata\":\"dim_user.nik\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"381.2938512449592D\"}}}},\"selector\":{\"metadata\":\"dim_user.nama\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"403.1603232909546D\"}}}},\"selector\":{\"metadata\":\"dim_user.witel\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"302.5324980279396D\"}}}},\"selector\":{\"metadata\":\"#metrics.Total_LOP\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRowsNew'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 441.85,
+          "width": 1211.67,
+          "x": 28.82,
+          "y": 178.39,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e63167194b006edddf64\",\"layouts\":[{\"id\":0,\"position\":{\"x\":28.81656309150907,\"y\":17.83882477093419,\"z\":0,\"width\":211.32146267106654,\"height\":74.09973366388047,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"LOP\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 74.10,
+          "width": 211.32,
+          "x": 28.82,
+          "y": 17.84,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
