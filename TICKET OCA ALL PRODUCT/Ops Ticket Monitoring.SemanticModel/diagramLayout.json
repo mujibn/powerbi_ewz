@@ -1,0 +1,136 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 120.83561643835617,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "s3_ticket_oca",
+          "nodeLineageTag": "52d3bc50-94e4-498b-8856-83645624a7c6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 38
+          },
+          "nodeIndex": "s1_ticket_oca_activity",
+          "nodeLineageTag": "5e5f9684-eabf-48be-acaf-c36844e806c3",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 0
+          },
+          "nodeIndex": "ticket_oca_flag_sla",
+          "nodeLineageTag": "6a6e80a5-d00e-4f47-95e3-8af3d9d0edd9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 0
+          },
+          "nodeIndex": "ticket_oca_avg_res",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 0
+          },
+          "nodeIndex": "all ticketing",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 261.095890410959,
+            "y": 302.41095890410952
+          },
+          "nodeIndex": "top_10_symptom_mytens",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 139.20547945205476
+          },
+          "nodeIndex": "top_10_symptom_myca",
+          "nodeLineageTag": "7ebbbe06-5146-4132-b659-12af6e2aaf2c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 139.20547945205476
+          },
+          "nodeIndex": "top_10_symptom_myib",
+          "nodeLineageTag": "3ed6fa3f-9879-42da-8831-e5757d9e3bae",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 175.20547945205476
+          },
+          "nodeIndex": "trend_ticket_with_nolayer",
+          "nodeLineageTag": "d9d2f2d0-0f03-4e7b-9c78-a70f5e5c20ad",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 97.333333333333343,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
